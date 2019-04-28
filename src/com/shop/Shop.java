@@ -1,8 +1,9 @@
 package com.shop;
-import java.util.*;
+import java.util.List;
 
-public class VietlottShop {
+public class Shop implements ShopManager{
 
+    private int id;
     private String owner;
     private int code;
     private int phone;
@@ -11,10 +12,44 @@ public class VietlottShop {
     private int moneyDeposit;
     private int moneyIssue;
 
-    public VietlottShop(String owner, int code, int phone) {
+    @Override
+    public void add(Shop shop) {
+
+    }
+
+    @Override
+    public void update(Shop shop) {
+
+    }
+
+    @Override
+    public void delete(int id) {
+
+    }
+
+    @Override
+    public List<Shop> getAll() {
+        return null;
+    }
+
+    @Override
+    public Shop get(int id) {
+        return null;
+    }
+
+    public Shop(int id, String owner, int code, int phone) {
+        this.id = id;
         this.owner = owner;
         this.code = code;
         this.phone = phone;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getOwner() {
